@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, Card, Image, Form, Input, TextArea, Confirm, Button, Select, Icon, Header } from 'semantic-ui-react';
-import img from '../../img/fantasy.jpg'
+import { Grid, Card, Popup, Image, Form, Input, TextArea, Confirm, Button, Select, Icon, Header } from 'semantic-ui-react';
+import img from '../../img/fantasy.jpg';
+// import Popup from './AñadirPersonaje';
 
 const genderOptions = [
     { key: 'm', text: 'Male', value: 'male' },
@@ -9,15 +10,28 @@ const genderOptions = [
 
 export default class CuentoForm extends React.Component {
 
-    state = { open: false }
+    state = {
+        open: false,
+        heroe: '',
+        villano: '',
+        personajes: 0
+    }
 
     show = () => this.setState({ open: true })
     handleConfirm = () => this.setState({ open: false })
     handleCancel = () => this.setState({ open: false })
+    addChar = (e) => {
+        this.setState({ personajes: this.state.personajes + 1 })
+    }
 
     render() {
 
         const style = {
+
+            background: {
+                backgroundColor: 'rgb(255,255,255, 0.7) !important'
+            },
+
             cardHeader: {
                 display: 'flex',
                 justifyContent: 'center',
@@ -31,7 +45,7 @@ export default class CuentoForm extends React.Component {
         }
 
         return (
-            <Card fluid color='purple' className='animated fadeInLeftBig'>
+            <Card fluid className='animated fadeInLeftBig' style={style.backgroundColor}>
                 <Header
                     as='h1'
                     icon
@@ -56,24 +70,32 @@ export default class CuentoForm extends React.Component {
                                 placeholder='Villano...'
                             />
                         </Form.Group>
+                        < Form.Group widths='equal'>
+                            <Form.Input fluid label='First name' placeholder='First name' />
+                            <Form.Input fluid label='Last name' placeholder='Last name' />
+                        </Form.Group>
+                        {/* {
+                                this.state.personajes 
+                                < Form.Group widths='equal'>
+                                <Form.Input fluid label='First name' placeholder='First name' />
+                            <Form.Input fluid label='Last name' placeholder='Last name' />
+                        </Form.Group>
+                        } */}
+
+                        <Form.Field>
+                            <Button
+                                basic
+                                color='purple'
+                                content='Añadir personaje'
+                                onClick={this.addChar} />
+                        </Form.Field>
+
                         <Form.Field
                             style={{ minHeight: 120 }}
                             id='form-textarea-control-opinion'
                             control={TextArea}
                             label='Cuento'
                             placeholder='Érase una vez...en un lugar muy muy lejano...'
-                        />
-                        <Button
-                            inverted
-                            color='purple'
-                            onClick={this.show}>
-                            Crear cuento!
-                        </Button>
-                        <Confirm
-                            open={this.state.open}
-                            content='This is a custom message'
-                            onCancel={this.handleCancel}
-                            onConfirm={this.handleConfirm}
                         />
                         {/* <Form.Field
                 id='form-button-control-public'
@@ -83,7 +105,20 @@ export default class CuentoForm extends React.Component {
             /> */}
                     </Form>
                 </Card.Content>
-            </Card>
+                <Button
+                    attached='bottom'
+                    // inverted
+                    color='purple'
+                    onClick={this.show}>
+                    Crear cuento!
+            </Button>
+                <Confirm
+                    open={this.state.open}
+                    content='This is a custom message'
+                    onCancel={this.handleCancel}
+                    onConfirm={this.handleConfirm}
+                />
+            </Card >
         )
     }
 }
