@@ -1,0 +1,35 @@
+@import '../../node_modules/animate.css/animate.min.css';
+@import '../../node_modules/hover.css/css/hover-min.css';
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500,800');
+
+body { 
+    font-family: 'Fira Sans', sans-serif !important;
+}
+
+.home {background-image: linear-gradient(to right bottom, #5b24c2, #6f1eae, #7a1b9b, #7f1e8a, #80237b);
+}
+
+.top-header {
+    background-image: linear-gradient(to right, #5b24c2, #6f1eae, #7a1b9b, #7f1e8a, #80237b) !important;
+    border-style: none !important;
+    color: white !important;
+    font-family: 'Fira Sans' !important;
+    font-weight: 500 !important;
+}
+
+.navItem {
+    font-family: 'Fira Sans' !important;
+    font-weight: 500 !important;
+}
+
+.crearCuentoBg{
+    background-image: linear-gradient(to right bottom, #efb1f8, #e4bafd, #dbc2ff, #d4c9ff, #cfcfff, #d3d5ff, #d7daff, #dce0ff, #e6e7ff, #efefff, #f8f7ff, #ffffff) !important;
+}
+
+.cuentosBg {
+    background-image: linear-gradient(to right bottom, #af98ff, #e797e3, #ffa1c8, #ffb2b7, #ffc7b5, #ffd1bb, #fedbc4, #fee5ce, #fde8d4, #fbeada, #faede1, #f8efe7) !important;
+}
+
+.weight800 {
+    font-weight: 800 !important
+}
