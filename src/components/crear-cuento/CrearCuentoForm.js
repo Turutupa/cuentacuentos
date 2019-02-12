@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, Popup, Image, Form, Input, TextArea, Confirm, Button, Select, Icon, Header } from 'semantic-ui-react';
+import { Card, Form, Input, TextArea, Confirm, Button, Divider, Icon, Header } from 'semantic-ui-react';
 import img from '../../img/fantasy.jpg';
 // import Popup from './AñadirPersonaje';
 
@@ -14,17 +14,44 @@ export default class CuentoForm extends React.Component {
         open: false,
         heroe: '',
         villano: '',
-        personajes: 0
+        personajes: []
     }
 
-    show = () => this.setState({ open: true })
-    handleConfirm = () => this.setState({ open: false })
-    handleCancel = () => this.setState({ open: false })
+    show = () => this.setState({ open: true });
+    handleConfirm = () => this.setState({ open: false });
+    handleCancel = () => this.setState({ open: false });
+
     addChar = (e) => {
-        this.setState({ personajes: this.state.personajes + 1 })
+
+        let pjsArr = this.state.personajes;
+        pjsArr.push([{}])
+
+        this.setState({ personajes: pjsArr })
+    };
+
+    deleteChar = (e, { pj }) => {
+        console.log(pj)
+        let pjsArr = this.state.personajes;
+        let newPjsArr = pjsArr.filter((elem, i) => {
+            return i !== pj
+        })
+        this.setState({ personajes: newPjsArr })
+    }
+
+    pjInfo = (e, { name, id }) => {
+
+        let pjArr = this.state.personajes;
+        pjArr[name][id] = e.target.value;
+
+        this.setState({
+            pjArr
+        })
+        console.log(this.state.personajes)
     }
 
     render() {
+
+        const { personajes } = this.state;
 
         const style = {
 
@@ -35,12 +62,18 @@ export default class CuentoForm extends React.Component {
             cardHeader: {
                 display: 'flex',
                 justifyContent: 'center',
-                paddingTop: 80,
-                paddingBottom: 80,
+                paddingTop: 50,
+                paddingBottom: 50,
                 marginBottom: 0,
                 backgroundImage: `url(${img})`,
                 backgroundPosition: 'center',
                 // backgroundRepeat: 'no-repeat, repeat',
+            },
+
+            deleteCharIcon: {
+                lineHeight: 2,
+                marginRight: '10px',
+                cursor: 'pointer'
             }
         }
 
@@ -56,31 +89,69 @@ export default class CuentoForm extends React.Component {
                 </Header>
                 <Card.Content>
                     <Form>
+                        <Form.Field as='h3' label='Comienza la aventura!' />
                         <Form.Group widths='equal'>
                             <Form.Field
                                 id='form-input-control-first-name'
                                 control={Input}
                                 label='Nombre del héroe'
-                                placeholder='Héroe...'
+                                placeholder='Héroe..'
+                                required
                             />
                             <Form.Field
                                 id='form-input-control-last-name'
                                 control={Input}
                                 label='Nombre del villano'
-                                placeholder='Villano...'
+                                placeholder='Villano..'
+                                required
+                            />
+                            <Form.Field
+                                id='form-input-control-location'
+                                control={Input}
+                                label='Lugar'
+                                placeholder='En un castillo de pucela..'
                             />
                         </Form.Group>
-                        < Form.Group widths='equal'>
-                            <Form.Input fluid label='First name' placeholder='First name' />
-                            <Form.Input fluid label='Last name' placeholder='Last name' />
-                        </Form.Group>
-                        {/* {
-                                this.state.personajes 
-                                < Form.Group widths='equal'>
-                                <Form.Input fluid label='First name' placeholder='First name' />
-                            <Form.Input fluid label='Last name' placeholder='Last name' />
-                        </Form.Group>
-                        } */}
+                        {
+                            personajes.length > 0
+                                ? <Form.Field as='h3' label='Personajes adicionales' />
+                                : ''
+                        }
+                        {
+                            personajes.length > 0
+                                ?
+                                personajes.map((personaje, i) => {
+                                    return (
+                                        <div key={i}>
+                                            <Divider />
+                                            < Form.Group inline widths='equal' >
+                                                <Icon
+                                                    pj={i}
+
+                                                    name='minus circle'
+                                                    size='large'
+                                                    style={style.deleteCharIcon}
+                                                    onClick={this.deleteChar} />
+                                                <Form.Input
+                                                    fluid
+                                                    id='personaje'
+                                                    name={i}
+                                                    onChange={this.pjInfo}
+                                                    label='Personaje'
+                                                    placeholder='El pirata.. enanito perezoso.. la tacita mágica..' />
+                                                <Form.Input
+                                                    fluid
+                                                    id='nombrePersonaje'
+                                                    name={i}
+                                                    onChange={this.pjInfo}
+                                                    label='Nombre del Personaje'
+                                                    placeholder='Alex... Tirso...' />
+                                            </Form.Group>
+                                        </div>
+                                    )
+                                })
+                                : ''
+                        }
 
                         <Form.Field>
                             <Button
@@ -97,12 +168,6 @@ export default class CuentoForm extends React.Component {
                             label='Cuento'
                             placeholder='Érase una vez...en un lugar muy muy lejano...'
                         />
-                        {/* <Form.Field
-                id='form-button-control-public'
-                control={Button}
-                content='Confirm'
-                label='Label with htmlFor'
-            /> */}
                     </Form>
                 </Card.Content>
                 <Button

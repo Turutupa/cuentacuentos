@@ -3,8 +3,15 @@ import { Menu, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+
+    const style = {
+        navbar: {
+            position: 'relative'
+        }
+    }
+
     return (
-        <div>
+        <div style={style.navbar}>
             <Menu secondary>
                 <Menu.Menu position='left'>
                     <Menu.Item

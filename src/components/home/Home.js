@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 import Tiles from './Tiles';
+import '../../style/home.css'
 
 export default class Home extends Component {
     render() {
@@ -30,9 +31,7 @@ export default class Home extends Component {
             <div className='home' style={style.topBar}>
                 <Menu />
                 <div style={style.content}>
-                    <div style={style.tiles}>
-                        <Tiles />
-                    </div>
+                    <Tiles />
                 </div>
             </div>
         )
