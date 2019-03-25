@@ -1,0 +1,52 @@
+/* TOP NAVBAR CSS */
+.menu {
+    border-radius: 0 !important;
+}
+
+.top-navbar-menu {
+    border-radius: 0;
+    background-color: #1B1C1D;
+}
+
+.top-navbar-menu-menu {
+}
+
+.top-navbar-menu-item {
+}
+
+/* SEARCH BAR CSS */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 0 7px 0;
+    background-color: rgb(80, 59, 122)
+}
+
+@media (min-width: 700px){
+    .search-bar .input {
+        min-width: 40vw;
+    }
+}
+
+@media (max-width: 700px){
+    .search-bar .input {
+        min-width: 80vw;
+    }
+}
+
+/* CATEGORIES BAR CSS */
+
+.categories-bar-container {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0px 1px 10px #999;
+}
+
+.categories-bar {
+    margin-top: 0 !important;
+}
+
+.categories-bar-shop-item {
+
+}

@@ -1,0 +1,39 @@
+.crear-cuento-form {
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    margin: 0 auto;
+    padding: 2% 2% 4% 2%;
+    /* color: #ffff; */
+    width: 100%;
+}
+
+.place-in-middle-crear-cuento {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+    flex-direction: column;
+    min-height:calc(100vh - 10vh);
+    padding: 7% 5% 10% 5%; 
+  }
+
+.crear-cuento-err-msg {
+    position: absolute !important;
+    top: 8vh;    
+}
+
+.crear-cuento-final {
+    padding: 0px 0px 30px 0px;
+    margin: 0 0 0 0;
+}
+
+.crear-cuento-tags {
+    padding: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
+}
+
+.crear-cuento-confirmar-cuento {
+    padding-top: 50px
+}

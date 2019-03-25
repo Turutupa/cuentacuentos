@@ -1,0 +1,27 @@
+.grid-container-cuento-detalles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+@media (min-width: 800px){
+    .grid-container-cuento-detalles {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr 0.5fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-gap: 10px 10px !important;
+        justify-items: stretch !important;
+        grid-template-areas: "cuento-details-main cuento-details-main cuento-details-main cuento-details-actions" "cuento-details-details cuento-details-details cuento-details-rating cuento-details-rating" "cuento-details-comment-section cuento-details-comment-section cuento-details-comment-section cuento-details-comment-section";
+    }
+
+    .cuento-details-main { grid-area: cuento-details-main; }
+
+    .cuento-details-actions { grid-area: cuento-details-actions; }
+
+    .cuento-details-details { grid-area: cuento-details-details; }
+
+    .cuento-details-rating { grid-area: cuento-details-rating; }
+
+    .cuento-details-comment-section { grid-area: cuento-details-comment-section; }
+}
+

@@ -1,0 +1,30 @@
+body { 
+    font-family: 'Fira Sans' !important;
+}
+
+.Cuentos {
+    padding: 60;
+    height: calc(100vh - 40px);
+    z-index: -1 !important;
+  }
+
+  .cuentos-content{
+    height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white !important;
+  }
+
+.cuentosBg {
+    /* background-image: linear-gradient(to right bottom, #af98ff, #e797e3, #ffa1c8, #ffb2b7, #ffc7b5, #ffd1bb, #fedbc4, #fee5ce, #fde8d4, #fbeada, #faede1, #f8efe7) !important; */
+}
+
+.navItem {
+    font-family: 'Fira Sans' !important;
+    font-weight: 500 !important;
+}
+
+.weight800 {
+    font-weight: 800 !important
+}

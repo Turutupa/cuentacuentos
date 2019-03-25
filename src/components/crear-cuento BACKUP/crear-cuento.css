@@ -1,0 +1,95 @@
+body { 
+    font-family: 'Fira Sans' !important;
+}
+
+  .bg {
+    width:100%;
+    height: 200px;
+    border-radius: 0 0 100% 100%;
+    /* background-image: linear-gradient(to right top, #051937, #472350, #842a4f, #ae4538, #b77611) !important; */
+    /* margin-top:0px; */
+  }
+ 
+input {
+    padding: 10.5px !important;
+    border-radius: 6px !important;
+    font-family: 'Fira Sans' !important;
+    font-size: 1.2em !important;
+    background-color:#FFFFF0 !important;
+    border-color: #E5DFA1 !important;
+}
+
+select {
+    padding: 10px !important;
+    border-radius: 6px !important;
+    font-family: 'Fira Sans' !important;
+    font-size: 1.2em !important;
+    background-color:#FFFFF0 !important;
+    border-color: #E5DFA1 !important;
+}
+
+textarea {
+    padding: 10px !important;
+    border-radius: 6px !important;
+    font-family: 'Fira Sans' !important;
+    font-size: 1.2em !important;
+    background-color:#FFFFF0 !important;
+    border-color: #E5DFA1 !important;
+}
+
+label {
+    font-size: 1.3em !important;
+    font-weight: 600 !important;
+    font-family: 'Fira Sans' !important;
+}
+
+button {
+    font-family: 'Fira Sans' !important;
+    font-weight: 500 !important;
+}
+
+/* .header {
+    font-weight: 600 !important;
+    font-size: 1.3em !important;
+} */
+
+.navItem {
+    font-family: 'Fira Sans' !important;
+    font-weight: 500 !important;
+    color: #fff !important;
+}
+
+/* .piratas{
+    background-image: url('../img/piratas.jpg')!important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+    background-size: cover !important; 
+}
+
+.fantastico{
+    background-image: url('../img/fantastico.jpg')!important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+    background-size: cover !important; 
+}
+
+.hadas{
+    background-image: url('../img/hadas.jpg')!important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important;
+    background-size: cover !important; 
+}
+
+.romantico{
+    background-image: url('../img/romantico.jpg')!important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+    background-size: cover !important;
+}
+
+.navidad{
+    background-image: url('../img/navidad.jpg')!important;
+    background-position: center !important; 
+    background-repeat: no-repeat !important; 
+    background-size: cover !important; 
+} */

@@ -1,0 +1,33 @@
+
+body, html {
+    margin:0 !important;
+    padding: 0 !important;
+    /* background-image: linear-gradient(to right top, #051937, #472350, #842a4f, #ae4538, #b77611) !important; */
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    z-index: -1 !important;
+}
+
+.home-background {
+    background-image: linear-gradient(to right bottom, #5b24c2, #6f1eae, #7a1b9b, #7f1e8a, #80237b) !important;
+    background-size: auto !important; 
+    /* clip-path: ellipse(100% 100% at 29% 10%); */
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    z-index: 0 !important;
+}
+
+
+.top-header {
+    background-image: linear-gradient(to right, #5b24c2, #6f1eae, #7a1b9b, #7f1e8a, #80237b) !important;
+    border-style: none !important;
+    color: white !important;
+    font-family: 'Fira Sans' !important;
+    font-weight: 500 !important;
+}
+
+.weight800 {
+    font-weight: 800 !important
+}

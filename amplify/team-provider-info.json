@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "cuentacuentos-20190220131437-authRole",
+            "UnauthRoleArn": "arn:aws:iam::709466138692:role/cuentacuentos-20190220131437-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::709466138692:role/cuentacuentos-20190220131437-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "cuentacuentos-20190220131437-deployment",
+            "UnauthRoleName": "cuentacuentos-20190220131437-unauthRole",
+            "StackName": "cuentacuentos-20190220131437",
+            "StackId": "arn:aws:cloudformation:eu-west-1:709466138692:stack/cuentacuentos-20190220131437/17210ad0-3509-11e9-87ff-02761942ff2c"
+        }
+    }
+}

@@ -7,7 +7,9 @@ export default class Tiles extends Component {
 
         const style = {
             header: {
-                cursor: 'pointer'
+                cursor: 'pointer',
+                fontFamily: 'Fira Sans',
+                fontWeight: 500
             }
         }
 

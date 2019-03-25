@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Grid, Header, Icon } from 'semantic-ui-react';
-import Navbar from '../Navbar';
-import ListadoCuentos from './ListadoCuentos';
-import '../../style/cuentos.css'
+import TarjetasCuentos from './cuentos-comp/TarjetasCuentos';
+import './cuentos.css'
 
 export default class Cuentos extends Component {
     render() {
@@ -28,17 +27,9 @@ export default class Cuentos extends Component {
                 style={style.background}
                 className='cuentosBg'
             >
-                <Navbar />
-                <Grid
-                    as={Container}
-                    fluid
-                    centered
-                    columns={1}
-                >
-                    <Grid.Column style={style.content}>
-                        <ListadoCuentos />
-                    </Grid.Column>
-                </Grid>
+                <Container fluid style={style.content}>
+                    < TarjetasCuentos childProps={this.props} />
+                </Container>
             </div>
         )
     }

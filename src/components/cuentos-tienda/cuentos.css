@@ -1,0 +1,82 @@
+.Cuentos {
+  padding-top: 10px;
+}
+
+@media (min-width: 800px){
+  .grid-container-cuentos-tienda {
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px 10px !important;
+    justify-items: stretch;
+    grid-template-areas: "cuentos-left-pane cuentos-primary-content cuentos-primary-content cuentos-primary-content" "cuentos-left-pane cuentos-primary-content cuentos-primary-content cuentos-primary-content" "cuentos-left-pane cuentos-secondary-content cuentos-secondary-content cuentos-secondary-content";
+  }
+  
+  .cuentos-left-pane { grid-area: cuentos-left-pane; justify-self: end; }
+  
+  .cuentos-primary-content { grid-area: cuentos-primary-content; }
+  
+  .cuentos-secondary-content { grid-area: cuentos-secondary-content; }
+} 
+
+/* @media (max-width: 700px){
+
+} */
+
+/* TILES HEADER */
+.cuentos-header-pane {
+  background-color: #f5f5f5;
+  box-shadow: 0px 1px 10px #999;
+  width: 100%;
+  height: 15vh;
+}
+
+.cuentos-categories-group {
+}
+
+.cuentos-categories-tile {
+  object-fit: cover;
+  width: auto;
+  height: 15vh;
+  margin-bottom: 10px ;
+  border-radius: 0 !important;
+}
+
+/* TIENDA DE CUENTOS */
+.cuentos-content-pane-preview {
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+}
+
+.cuentos-cuento-preview {
+  cursor: pointer;
+  border-style: solid !important;
+  border-width: 7px !important;
+  border-color: white !important;
+  box-shadow: none !important;
+}
+
+.cuentos-slick-container {
+  width: 100%;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+button.slick-arrow.slick-prev::before {
+  color: black;
+}
+button.slick-arrow.slick-next::before {
+  color: black;
+}
+
+.cuentos-slick {
+
+}
+
+.cuentos-tag {
+  margin: 3px 3px 3px 3px !important;
+}

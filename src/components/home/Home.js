@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Menu from './Menu';
-import Tiles from './Tiles';
-import '../../style/home.css'
+import Menu from './home-comp/Menu';
+import Tiles from './home-comp/Tiles';
+import './home.css'
 
 export default class Home extends Component {
     render() {
@@ -16,7 +16,7 @@ export default class Home extends Component {
             },
 
             content: {
-                height: 'calc(100vh - 47px)',
+                height: 'calc(100vh - 100px)',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -28,7 +28,7 @@ export default class Home extends Component {
         }
 
         return (
-            <div className='home' style={style.topBar}>
+            <div className='home-background' style={style.topBar}>
                 <Menu />
                 <div style={style.content}>
                     <Tiles />

@@ -33,7 +33,8 @@ export default class Home extends Component {
                     to='/'
                     size='big'
                     basic
-                    color='yellow'>Go back home
+                    color='yellow'>
+                    Página Principal
                 </Button>
             </div>
         )
