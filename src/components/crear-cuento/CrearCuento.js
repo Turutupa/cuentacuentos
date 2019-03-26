@@ -69,7 +69,7 @@ export default class CrearCuento extends Component {
         }
 
         try {
-            this.crearCuento(userId).then(res => this.props.history.push(`/editar-cuento/${res.SK}/${res.PK}`));
+            this.crearCuento(userId).then(res => this.props.history.push(`/editar-cuento/${res.PK}?author=${res.SK}`));
         } catch (e) {
             // alert(e);
             this.setState({ isLoading: false });

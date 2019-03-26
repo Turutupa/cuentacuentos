@@ -24,6 +24,6 @@ export default ({ childProps }) =>
         <AppliedRoute exact path='/crear-cuento' component={CrearCuento} props={childProps} />
         <AppliedRoute exact path='/cuentos' component={Cuentos} props={childProps} />
         <AppliedRoute exact path='/cuentos/temp' component={CuentoDetalles} props={childProps} />
-        <AppliedRoute path='/editar-cuento/:author/:id' component={EditarCuento} props={childProps} />
+        <AppliedRoute path='/editar-cuento/:id' component={EditarCuento} props={childProps} />
         <Route component={Error} />
     </Switch>

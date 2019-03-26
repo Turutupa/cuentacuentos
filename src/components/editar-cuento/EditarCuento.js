@@ -48,8 +48,8 @@ export default class EditarCuento extends Component {
     }
 
     componentDidMount = async () => {
-        console.log(this.props.match.params)
-        const cuento = await API.get('stories', `/stories/${this.props.match.params.author}/${this.props.match.params.id}`)
+        // console.log(this.props)
+        const cuento = await API.get('stories', `/stories/${this.props.match.params.id}${this.props.location.search}`)
         this.setState({
             isLoading: false,
             author: cuento.author ? cuento.author : 'Autor',
